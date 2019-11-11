@@ -14,7 +14,7 @@ https://github.com/NAVER-CAMPUS-HACKDAY/toon-star-rader/issues/1
 	- 큐에 메시지(사용자의 컨텐츠별 회차의 별점 정보) 메시지 삽입
 3. kafka Consumer 개발 
 	- 큐에서 읽은 데이터 DB 삽입 
-4. 별점 평균 타임라인(area chart) 조회 화면 개발 (예시 https://naver.github.io/billboard.js/demo/#Chart.AreaRangeChart)
+4. 별점 평균 타임라인(area chart) 조회 화면 개발 (예시 https://naver.github.io/billboard.js/demo/#Chart.TimeseriesChart)
 	- 조회조건: 컨텐츠(default), 회차(optional), 기간(optional)(기본 2019/11/10/22 ~ 2019/11/11/22)
 
 ## 기술스택 
