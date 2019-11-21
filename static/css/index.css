@@ -1,0 +1,123 @@
+html{
+    background-color: #d3ffe6;
+}
+#titleHead{
+    background-color: #caf1db;
+    color: #00820b;
+    font-family: Arial;
+    /* margin-top: 3vw; */
+    font-size: 4vw;
+    width: 100vw;
+    display: inline-block;
+    height: 8vw;
+    text-align: center;
+    margin-bottom: 5vw;
+    /* background-color: white; */
+    padding-top: 3vw;
+    border-bottom: 1px solid #b8f7bd;
+}
+#titleHead2{
+    color: #002d04;
+    font-family: Arial;
+    /* margin-top: 1vw; */
+    font-size: 2vw;
+    width: 80vw;
+    display: inline-block;
+    height: 1vw;
+    text-align: left;
+    margin-bottom: 2vw;
+}
+#titleHead3{
+    margin-top:3vw;
+    color: #002d04;
+    font-family: Arial;
+    /* margin-top: 1vw; */
+    font-size: 2vw;
+    width: 80vw;
+    display: inline-block;
+    height: 1vw;
+    text-align: left;
+    margin-bottom: 2vw;
+}
+.dataControl{
+    background-color: white;
+    b: 1px;
+    border: 1px solid #8dfb90;
+    width: 69vw;
+    /* margin-left: 13vw; */
+    padding-left: 11vw;
+}
+.h{
+    margin-top:2vw;
+    padding-left:1vw;
+    font-family: Arial;
+}
+input{
+    font-family: Arial;
+    /* border-radius: 1vw; */
+    width: 12vw;
+    border: none;
+    background-color: #9dffa9;
+    height: 3vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    color: #00460c;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+#sday{
+    padding-left: 4vw;
+}
+#eday{
+    padding-left: 4vw;
+}
+#timeseriesChart{
+    width:78vw;
+    margin-top:2vw;
+    border-radius: 3vw;
+    background-color: white;
+}
+
+#starPie{
+    padding-top:2vw;
+    width:78vw;
+    margin-top:2vw;
+    border-top: 1px solid #8affa0;
+    background-color: white;
+}
+#content{
+    margin-left:10vw;
+    width: 80vw;
+    margin-right:10vw;
+}
+
+#container{
+    height: auto;
+    background-color: white;
+    border: 1px solid #8dfb90;
+}
+
+#SDATE{
+    display: inline;
+    margin-bottom: 2vw;
+}
+#EDATE{
+    display: inline;
+}
+#done{
+    background-color: #00b50e;
+}
+#sub {
+}
+#seriesId{
+    text-align: center;
+    width: 27.5vw;
+}
+#footer{
+    background-color: #caf1db;
+    border-top: 1px solid #b8f7bd;
+    margin-top: 10vw;
+    width: 100%;
+    height: 10vw;
+}
