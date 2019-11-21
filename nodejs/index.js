@@ -15,7 +15,6 @@ function getDateString(id){
 }
 
 
-
 // 리셋 버튼이 눌렸을때.
 async function onSubmit(){
   let SDate = getDateString("SDATE");

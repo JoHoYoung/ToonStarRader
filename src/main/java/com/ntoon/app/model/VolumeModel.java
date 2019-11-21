@@ -1,25 +1,27 @@
 package com.ntoon.app.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class StarModel {
+@Document(collection = "SERIES")
+public class VolumeModel {
   @Id
-  @JsonProperty("id")
   private String id;
-  @JsonProperty("score")
-  private float score;
-  @JsonProperty("createdAt")
+  private String contentsId;
+  private int no;
+  private int totalUserNumber;
+  private float totalStarNumber;
   private Date createdAt;
+  private Date updatedAt;
+  private List<StarModel> stars;
 }

@@ -11,11 +11,11 @@ import java.util.Date;
 @Data
 @Document(collection = "TOON")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ToonModel {
+public class ContentsModel {
 
-  public ToonModel() { }
+  public ContentsModel() { }
 
-  public ToonModel(String id, String name, String author, Date createdAt, Date updatedAt) {
+  public ContentsModel(String id, String name, String author, Date createdAt, Date updatedAt) {
     this.id = id;
     this.name = name;
     this.author = author;
