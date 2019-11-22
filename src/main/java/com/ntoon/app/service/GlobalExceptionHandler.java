@@ -13,7 +13,7 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(HttpMessageNotReadableException.class)
   protected ErrorResponse HttpMessageNotReadableExceptionHandler(HttpMessageNotReadableException e) {
-    return new ErrorResponse(700,"Invalid Request Format" + e);
+    return new ErrorResponse(700,"Invalid Request Format");
   }
 
   @ExceptionHandler(JsonProcessingException.class)
@@ -23,12 +23,12 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(ParseException.class)
   protected ErrorResponse ParseExceptionHandler(ParseException e){
-    return new ErrorResponse(700,"Invalid Request Format" + e);
+    return new ErrorResponse(700,"Invalid Request Format");
   }
 
   @ExceptionHandler(Exception.class)
   protected ErrorResponse ExceptionHandler(Exception e){
-    return new ErrorResponse(700,"Invalid Request Format" + e);
+    return new ErrorResponse(700,"Invalid Request Format");
   }
 
 }
