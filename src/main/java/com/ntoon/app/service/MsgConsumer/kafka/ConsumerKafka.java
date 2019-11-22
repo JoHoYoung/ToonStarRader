@@ -19,14 +19,6 @@ public class ConsumerKafka {
 
   @KafkaListener(topics = "test", groupId = "test")
   public void receive(String record) throws IOException {
-    System.out.println("GET 1");
     dbTransaction.insertStarData(record);
   }
-//
-//  @KafkaListener(topics = "test", groupId = "monitor")
-//  public void monitoring(String record) throws IOException {
-//    System.out.println("GET 2");
-//    dbTransaction.insertStarData(record);
-//  }
-
 }
