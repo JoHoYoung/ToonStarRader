@@ -24,7 +24,6 @@ class GraphSetting {
   setTerm = () => {
     this.term = this.interval / this.termNumber;
   }
-
 }
 
 module.exports = new GraphSetting();

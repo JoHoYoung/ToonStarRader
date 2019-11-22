@@ -19,5 +19,4 @@ public class DateTreat {
     this.cal.add(Calendar.HOUR,amount);
     return this.cal.getTime();
   }
-
 }

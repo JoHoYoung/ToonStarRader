@@ -8,23 +8,17 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "Contents")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ContentsModel {
+@Document(collection = "CheatUser")
+public class CheatUserModel {
   @Id
   @JsonProperty("id")
   private String id;
-  @JsonProperty("name")
-  private String name;
-  @JsonProperty("author")
-  private String author;
-  @JsonProperty("createdAt")
-  private Date createdAt;
-  @JsonProperty("updatedAt")
-  private Date updatedAt;
+  @JsonProperty("stars")
+  List<StarModel> Stars;
 }

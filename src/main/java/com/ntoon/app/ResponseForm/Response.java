@@ -1,4 +1,11 @@
 package com.ntoon.app.ResponseForm;
 
-public interface Response {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public abstract class Response {
+  private int statusCode;
+  private String statusMsg;
 }

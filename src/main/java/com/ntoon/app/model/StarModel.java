@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.Date;
 
 @Data
@@ -15,6 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class StarModel {
+
   @Id
   @JsonProperty("id")
   private String id;
@@ -22,4 +21,5 @@ public class StarModel {
   private float score;
   @JsonProperty("createdAt")
   private Date createdAt;
+
 }

@@ -3,10 +3,6 @@ class Graph {
     this.json = {data:{},title: {}};
   }
 
-  setProperty = (val) => {
-    this.json = val;
-  }
-
   setTitle = (text) => {
     this.json.title.text = text;
   }

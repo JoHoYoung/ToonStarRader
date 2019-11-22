@@ -1,0 +1,30 @@
+<configuration>
+    <property name="LOG_DIR" value="/Users/HY/IdeaProjects/NToon/logs" />
+    <property name="LOG_PATH" value="${LOG_DIR}/Ntoon.log"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %-5level %d{HH:mm:ss.SSS} [%thread %F:%L] %method - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <appender name="ROLLING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}</file>
+        <encoder>
+            <pattern>%-5level %d{HH:mm:ss.SSS} [%thread %F:%L] %method - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/NToon_%d{yyyy-MM-dd}_%i.log.gz</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <logger name="com.Ntoon.app" level="INFO">
+        <appender-ref ref="ROLLING_FILE"/>
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
