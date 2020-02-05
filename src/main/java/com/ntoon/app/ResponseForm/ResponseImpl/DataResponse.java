@@ -13,5 +13,4 @@ public class DataResponse<T> extends Response {
     super(statusCode,statusMsg);
     this.data = data;
   }
-
 }

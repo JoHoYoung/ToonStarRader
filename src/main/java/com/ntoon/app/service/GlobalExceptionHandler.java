@@ -2,6 +2,7 @@ package com.ntoon.app.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.ntoon.app.ResponseForm.ResponseImpl.ErrorResponse;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

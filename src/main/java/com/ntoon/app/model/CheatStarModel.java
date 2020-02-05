@@ -13,5 +13,4 @@ public class CheatStarModel {
   float score;
   float volumeAverage;
   Date createdAt;
-
 }

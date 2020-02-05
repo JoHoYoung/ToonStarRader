@@ -79,4 +79,5 @@ public class DBTransaction {
     update.addToSet("stars",new CheatStarModel(cheatStar.getVolumeId(),cheatStar.getScore(),avg,cheatStar.getCreatedAt()));
     mongoTemplate.upsert(Query.query(Criteria.where("_id").is(cheatStar.getUserId())), update, CheatUserModel.class);
   }
+
 }

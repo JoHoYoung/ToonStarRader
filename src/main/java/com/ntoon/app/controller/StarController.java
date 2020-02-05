@@ -46,7 +46,11 @@ public class StarController {
   public Response createStar(@RequestBody CreateStar data) throws JsonProcessingException {
     data.setCreatedAt(new Date());
     producer.publish("test", objectMapper.writeValueAsString(data));
-    return new BaseResponse(200,"success");
+    return new BaseResponse(200, "success");
   }
 
+  @RequestMapping(value = "/test", method = RequestMethod.GET)
+  public String createStar() throws JsonProcessingException {
+    return "AA";
+  }
 }
