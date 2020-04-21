@@ -1,0 +1,79 @@
+<html>
+<meta charset="UTF-8">
+<head>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="http://localhost/static/css/test.css">
+<script>
+  $.ajax({
+    url: "http://localhost:8080/api/v1/admin/data", // 클라이언트가 요청을 보낼 서버의 URL 주소
+    type: "GET",                             // HTTP 요청 방식(GET, POST)
+  }).done((data) => {
+    data = data.data;
+    console.log(data);
+
+    for(let i=0;i<data.length;i++){
+
+      let box = document.createElement("div");
+      box.className = "block"
+
+      let id = document.createElement("input")
+      id.type = "hidden";
+      id.value = data[i].songId
+
+      let title = document.createElement("span");
+      title.className = "title";
+      title.innerHTML = data[i].singerName + " | " + data[i].songName;
+
+      let lyrics = document.createElement("input");
+      lyrics.className = "lyrics";
+      lyrics.value = data[i].lyrics;
+
+      let key = document.createElement("input");
+      key.className = "key"
+      key.value = data[i].key;
+
+      let done = document.createElement("input")
+      done.type = "button"
+      done.className = "done";
+
+      box.appendChild(id);
+      box.appendChild(title);
+      box.appendChild(lyrics);
+      box.appendChild(key);
+      box.appendChild(done);
+
+
+      done.addEventListener("click", (el) => {
+
+        let parent = el.target.parentNode;
+        let inputValues = parent.childNodes;
+        let dataJson = {
+          songId : inputValues[0].value,
+          lyrics : inputValues[2].value,
+          key : inputValues[3].value
+        }
+        $.ajax({
+          url: "http://localhost:8080/api/v1/admin/update", // 클라이언트가 요청을 보낼 서버의 URL 주소
+          type: "POST",                             // HTTP 요청 방식(GET, POST)
+          data : JSON.stringify(dataJson),
+          contentType: "application/json;charset=utf-8"
+        }).done((res) => {
+          if(res.statusCode === 200){
+            parent.parentNode.removeChild(parent)
+          }
+        })
+      })
+
+      document.getElementById("content").appendChild(box);
+    }
+  })
+</script>
+<body>
+<span id="titleHead">TOON STAR RADER</span>
+<div id = "content">
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

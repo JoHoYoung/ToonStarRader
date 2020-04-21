@@ -1,0 +1,31 @@
+{
+  "name": "npm_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^7.0.0-0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/plugin-transform-classes": "^7.3.4",
+    "babel-plugin-transform-class-property-arrow-functions": "^1.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0"
+  }
+}
